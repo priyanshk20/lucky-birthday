@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Birthday</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Is Your Birthday Lucky?</h1>
@@ -13,10 +17,14 @@
         <label for="birthday">What is your birthday?</label>
         <input type="date" id="birth" required>
         <label for="lucky-number">What is your lucky number?</label>
-        <input type="number" id="lucky-number">
+        <input type="number" id="lucky-number" min="1" max="99" placeholder="Enter Number">
     </div>
     <div class="btn">
         <button id="btn">Check Number</button>
+    </div>
+    <h3 id="output"></h3>
+    <div class="graphic">
+        <img id="image" src="/check.png" alt="">
     </div>
     <script src="/app.js"></script>
 </body>
