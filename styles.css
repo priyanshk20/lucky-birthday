@@ -27,7 +27,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 label{
@@ -88,4 +88,26 @@ input,button{
 .foot a {
     text-decoration: none;
     color: white;
+}
+
+.mssg-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    width: 30%;
+    text-align: center;
+    margin:1.5rem;
+    background-color:white;
+    padding: 0.5rem;
+}
+
+.info p{
+    font-size: 1.5em;
+}
+
+.info span{
+cursor: pointer;
 }

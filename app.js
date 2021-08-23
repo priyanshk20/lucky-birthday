@@ -3,7 +3,13 @@ const luckyNum = document.querySelector('#lucky-number');
 const btn = document.querySelector('#btn');
 const output = document.querySelector('#output');
 const image = document.querySelector('#image');
+const msgDiv = document.querySelector('.mssg-contain');
+const cross = document.querySelector('#cross');
 
+
+cross.addEventListener('click', ()=> {
+    msgDiv.style.display = 'none';
+})
 
 const compare = (sum,luckyNum) => {
 
