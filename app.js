@@ -14,16 +14,30 @@ cross.addEventListener('click', ()=> {
 const compare = (sum,luckyNum) => {
 
     if(sum % luckyNum === 0) {
-        output.innerHTML="Your Birthday is Lucky 😁";
-        image.src = "/luck.png";
-        image.style.border = "3px solid green";
+       setter();
+        setTimeout(function(){ 
+            output.innerHTML="Your Birthday is Lucky 😁";
+            image.src = "/luck.png";
+            image.style.border = "3px solid green";
+        }, 2000);
     }
     else {
-        output.innerHTML="Sorry, It's Not Lucky 🙄";
-        image.src = "/unluck.jpg";
-        image.style.border = "3px solid red";
+       setter();
+        setTimeout(function(){ 
+            output.innerHTML="Sorry, It's Not Lucky 🙄";
+            image.src = "/unluck.jpg";
+            image.style.border = "3px solid red";
+        },2000)
     }
 }
+
+
+const setter = () => {
+    image.src = "/load.jpg";
+    output.innerText = ""
+    image.style.border = "3px solid black";
+}
+
 
 const checkLucky = () => {
     const bdate = dob.value;
@@ -40,11 +54,5 @@ const calcSum = (bdate) => {
     }
     return sum;
 }
-
-// const lucky = () => {
-//     const image = document.createElement('img');
-//     image.src  = '/lucky.jpg';
-//     document.querySelector('.graphic').appendChild(image);
-// }
 
 btn.addEventListener('click', checkLucky);
